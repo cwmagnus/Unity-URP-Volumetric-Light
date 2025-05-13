@@ -184,7 +184,7 @@ float3 GetStepAdditionalLightsColor(float2 uv, float3 currPosWS, float3 rd, floa
         additionalLightsColor += (additionalLight.color * (additionalLight.shadowAttenuation * additionalLight.distanceAttenuation * phase * density * newScattering));
     LIGHT_LOOP_END
 
-    return additionalLightsColor;
+    return additionalLightsColor * _Tint;
 }
 
 // Calculates the volumetric fog. Returns the color in the RGB channels and transmittance in alpha.

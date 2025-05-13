@@ -92,6 +92,7 @@ public sealed class VolumetricFogVolumeComponentEditor : VolumeComponentEditor
 		bool enabledMainLightContribution = enableMainLightContribution.overrideState.boolValue && enableMainLightContribution.value.boolValue;
 		bool enabledAdditionalLightsContribution = enableAdditionalLightsContribution.overrideState.boolValue && enableAdditionalLightsContribution.value.boolValue;
 
+		PropertyField(tint);
 		PropertyField(distance);
 		PropertyField(baseHeight);
 		PropertyField(maximumHeight);
@@ -114,7 +115,6 @@ public sealed class VolumetricFogVolumeComponentEditor : VolumeComponentEditor
 		{
 			PropertyField(anisotropy);
 			PropertyField(scattering);
-			PropertyField(tint);
 		}
 
 		PropertyField(enableAdditionalLightsContribution);

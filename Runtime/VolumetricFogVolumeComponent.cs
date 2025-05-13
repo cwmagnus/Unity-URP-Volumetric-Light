@@ -33,6 +33,8 @@ public sealed class VolumetricFogVolumeComponent : VolumeComponent, IPostProcess
 	public FloatParameter groundHeight = new FloatParameter(0.0f);
 
 	[Header("Lighting")]
+	[Tooltip("A multiplier color to tint for all fog.")]
+	public ColorParameter tint = new ColorParameter(Color.white, true, false, true);
 	[Tooltip("How dense is the fog.")]
 	public ClampedFloatParameter density = new ClampedFloatParameter(0.2f, 0.0f, 1.0f);
 	[Tooltip("Value that defines how much the fog attenuates light as distance increases. Lesser values lead to a darker image.")]
@@ -51,8 +53,6 @@ public sealed class VolumetricFogVolumeComponent : VolumeComponent, IPostProcess
 	public ClampedFloatParameter anisotropy = new ClampedFloatParameter(0.4f, -1.0f, 1.0f);
 	[Tooltip("Higher values will make fog affected by the main light to appear brighter.")]
 	public ClampedFloatParameter scattering = new ClampedFloatParameter(0.15f, 0.0f, 1.0f);
-	[Tooltip("A multiplier color to tint the main light fog.")]
-	public ColorParameter tint = new ColorParameter(Color.white, true, false, true);
 
 	[Header("Additional Lights")]
 	[Tooltip("Disabling this will avoid computing additional lights contribution to fog, which in most cases will lead to better performance.")]
